@@ -32,10 +32,8 @@ function corBotao(bt) {
    for(let i = 1; i <=5; i++) {
       if(bt != i) {
          document.getElementById(i).style.backgroundColor="#e1e1e1"
-         document.getElementById(i).style.border="1px solid grey"
       } else {
          document.getElementById(bt).style.backgroundColor="white"
-         document.getElementById(bt).style.border="white"
       }
    }
 }

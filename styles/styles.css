@@ -44,6 +44,9 @@ li {
    margin: 5px 10px 5px 10px;
    text-align: center;
 }
+li.bt1 {
+   background-color: white;
+}
 article {
    padding: 50px;
    width: 80%;
