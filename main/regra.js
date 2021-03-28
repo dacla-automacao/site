@@ -1,10 +1,12 @@
+let pgInicial = document.getElementById("texto").innerHTML
+
 function direciona(bt) {
    let txt = document.getElementById("texto")
    let idBotao = bt.id
 
    switch (idBotao) {
       case '1': /* Sobre Nós */
-         txt.innerHTML='<h1>Sobre Nós</h1><p>DACLA Automação é uma empresa desenvolvedora de Sistemas Desktop, Mobile, Web e Embarcados.</p><p>Criada em 2020 pelo CEO Daniel Clarinda. Desenvolvemos sistemas inteligentes e personalizados voltados a automatização de processos.<br> Do hardware a interface do usuário.</p><p>Usando stacks modernas conseguimos desenvolver projetos de automatização industriais, residenciais e artísticas de forma rápida, responsiva e multiplataforma.</p>'
+         txt.innerHTML=pgInicial
          corBotao(idBotao)
          break;
       case '2': /* Produtos */
