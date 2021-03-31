@@ -9,12 +9,14 @@ body {
    -moz-user-select: none;     
    -ms-user-select: none;      
    user-select: none;
-   background-color: grey;
    font-family: Arial, Helvetica, sans-serif;
-   background-image: linear-gradient(#d8efff 80%, #a5dbff);
+   background-image: url('../img/back1.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
 }
 div#coluna, footer {
-   margin: 10px auto;            /* Isso alinha coluna e footer */
+   margin: 10px auto 10px auto;
 }
 div#coluna {
    width: 70%;
@@ -40,7 +42,7 @@ ul {
 }
 ul li {
    cursor: pointer;
-   background-color: #2980B9;
+   background-color: #26538A;
    color: white;
    border: 1px solid grey;
    border-radius: 3px;
@@ -82,12 +84,12 @@ section::after {
    border: none;
  }
 footer {
+   color: white;
    font-size: 10pt;
-   padding: 25px;
    text-align: center;
 }
 footer a {
-   text-decoration: none;
+   color: inherit;
 }
 /* Responsividade */
 @media (max-width: 900px) {

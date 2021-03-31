@@ -37,7 +37,7 @@ function direciona(bt) {
 function corBotao(bt) {
    for(let i = 1; i <=5; i++) {
       if(bt != i) {
-         document.getElementById(i).style.backgroundColor="#2980B9"
+         document.getElementById(i).style.backgroundColor="#26538A"
          document.getElementById(i).style.color="white"
       } else {
          document.getElementById(bt).style.backgroundColor="white"
