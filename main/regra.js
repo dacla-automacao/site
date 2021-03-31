@@ -1,29 +1,27 @@
 let sobre = document.getElementById("texto").innerHTML
 let servicos = `
 <h1>Serviços</h1>
-<p><strong>Sistemas Embarcados</strong></p>
-
+<h4><strong>Sistemas Embarcados</strong></h4>
 <p>Fabricamos PCBs usando os microcontroladores e processadores mais difundidos do mercado. Microchip PIC, Atmel AVR (Arduino), ARM Cortex (STM32 e RaspBerry Pi) e Espressif (ESP32 e NodeMCU).<br>
 Sobre medida para atender as mais diversas necessidades, IoT (internet das coisas), Domótica (automação residencial), automatização de máquinas, interfaces musicais e artísticas.</p>
 
-<p><strong>Desenvolvimento Web</strong></p>
-<p>No desenvolvimento Web usamos as stacks mais populares como HTML5, CSS3, JavaScript, ReactJS, JSON, NodeJS e SQL, na criação de sites, SPAs, Aplicações Web, entre outros.</p>
+<h4><strong>Aplicações Web</strong></h4>
+<p>No desenvolvimento Web usamos as stacks mais populares como HTML5, CSS3, JavaScript, ReactJS, JSON, NodeJS e SQL, na criação de sites, SPAs, aplicações Web, games, entre outros.</p>
 
-<p><strong>Sistemas Desktop - Software</strong></p>
-<p>Para sistemas operacionais aproveitamos a beleza e responsividade das tecnologias Web juntamente com framework Electron para resultar em softwares multiplataforma.</p>
+<h4><strong>Softwares Multiplataforma</strong></h4>
+<p>Para sistemas operacionais aproveitamos a beleza e responsividade das tecnologias Web juntamente com framework Electron para resultar em softwares para Windows e Linux.</p>
 
-<p><strong>Aplicações Mobile</strong></p>
-<p>Desenvolvimento de Apps para smartphones com React Native.</p>
+<h4><strong>Aplicações Mobile</strong></h4>
+<p>Desenvolvimento de Apps Nativos para smartphones com React Native.</p>
 
-<p><strong>Programação de CLPs</strong></p>
+<h4><strong>Automação Industrial - Programação de CLPs</strong></h4>
 <p>Automatização de máquinas industriais com controladores lógicos programáveis na linguagem Ladder.</p>
 
-<p><strong>Desenvolvimento de IHMs</strong></p>
-<p>Desenvolvimento de interfaces gráficas e trouch para supervisão e controle de máquinas industriais.</p>`
+<h4><strong>Desenvolvimento de IHMs</strong></h4>
+<p>Desenvolvimento de interfaces gráficas e trouch para supervisão e controle de processos industriais.</p>`
 let produtos = `
 <h1>Produtos</h1>
-<p><strong>#1 - Automatização do processo industrial de fabricação de Paver e Lajotas.</strong></p>
-
+<h4><strong>#1 - Automatização do processo industrial de fabricação de Paver e Lajotas.</strong></h4>
 <p>Nesse projeto foi desenvolvido uma placa eletrônica microcontrolada programável, a fim de converter uma máquina industrial de processo manual para automático. A automação aumentou a produção e resultou em uma qualidade consistente.</p>
 <br>
 <div id="video">
