@@ -10,10 +10,6 @@ body {
    -ms-user-select: none;      
    user-select: none;
    font-family: Arial, Helvetica, sans-serif;
-   background-image: url('../img/back1.jpg');
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-size: cover;
 }
 div#coluna, footer {
    margin: 10px auto 10px auto;
@@ -23,13 +19,10 @@ div#coluna {
    min-width: 345px;
    min-height: 520px;
    background-color: white;
-   border-radius: 5px;
-   box-shadow: 0px 0px 10px black;
 }
 header {
-   padding: 20px;
+   padding: 5vh;
    text-align: center;
-   border-bottom: 1px solid grey;
 }
 nav, article {
    float: left;            /* Faz um ficar do lado do outro */
@@ -88,7 +81,8 @@ section::after {
    border: none;
  }
 footer {
-   color: white;
+   color: #0066CC;
+   padding: 2vh;
    font-size: 10pt;
    text-align: center;
 }
@@ -97,7 +91,7 @@ footer a {
 }
 /* Responsividade */
 @media (max-width: 900px) {
-   nav, article {
+   nav, article, div#coluna {
       width: 100%;
       height: auto;
    }

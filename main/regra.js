@@ -29,7 +29,8 @@ let produtos = `
 </div>`
 let downloads = `
 <h1>Downloads</h1>
-<p>Algumas páginas ainda estão em desenvolvimento</p>`
+<p>Desculpe!</p>
+<p>Algumas páginas ainda estão em desenvolvimento.</p>`
 let contato = `
 <h1>Contato</h1>
 <p>Para orçamentos ou sugestões.<br>Atendemos de Segunda a Sexta-feira das 8:00h as 18:00h.</p>
