@@ -24,7 +24,9 @@ const services = `
 Tudo sobre medida para atender as mais diversas necessidades, internet das coisas(IoT), automação residencial(Domótica), automação de máquinas, interfaces musicais e artísticas.</p>
 
 <div class="picture">
-	<img src="./images/sistema-embarcado.jpg" alt="Foto de um sistema embarcado">
+	<a href="./images/sistema-embarcado.jpg">
+		<img src="./images/sistema-embarcado.jpg" alt="Foto de um sistema embarcado">
+	</a>
 </div>
 </div>
 
@@ -34,7 +36,9 @@ Tudo sobre medida para atender as mais diversas necessidades, internet das coisa
 <p>No desenvolvimento web usamos as stacks mais populares para criar sites, SPAs, Web Apps, games, entre outros.</p>
 
 <div class="picture">
-	<img src="./images/dashboard.png" alt="Imagem de um painel de controle web - Dashboard">
+	<a href="./images/dashboard.png">
+		<img src="./images/dashboard.png" alt="Imagem de um painel de controle web - Dashboard">
+	</a>
 </div>
 </div>
 
@@ -44,7 +48,9 @@ Tudo sobre medida para atender as mais diversas necessidades, internet das coisa
 <p>Aproveitamos a beleza e responsividade das tecnologias Web para desenvolver programas para sistemas operacionais Windows e Linux.</p>
 
 <div class="picture">
-	<img src="./images/weather.jpg" alt="Exemplo que software desenvolvido com electron - Weather">
+	<a href="./images/weather.jpg">
+		<img src="./images/weather.jpg" alt="Exemplo que software desenvolvido com electron - Weather">
+	</a>
 </div>
 </div>
 
@@ -54,7 +60,9 @@ Tudo sobre medida para atender as mais diversas necessidades, internet das coisa
 <p>Desenvolvimento de Aplicativos Nativos para smartphones Android e iOS.</p>
 
 <div class="picture">
-	<img src="./images/mobile-app.png" alt="Exemplo de aplicações mobile">
+	<a href="./images/mobile-app.png">
+		<img src="./images/mobile-app.png" alt="Exemplo de aplicações mobile">
+	</a>
 </div>
 </div>
 
@@ -64,7 +72,9 @@ Tudo sobre medida para atender as mais diversas necessidades, internet das coisa
 <p>Automatização de máquinas industriais com controladores lógicos programáveis(CLPs).</p>
 
 <div class="picture">
-	<img src="./images/clp-ladder.jpg" alt="CLP Clic02 WEG progamado em Ladder">
+	<a href="./images/clp-ladder.jpg">
+		<img src="./images/clp-ladder.jpg" alt="CLP Clic02 WEG progamado em Ladder">
+	</a>
 </div>
 </div>
 
@@ -74,7 +84,9 @@ Tudo sobre medida para atender as mais diversas necessidades, internet das coisa
 <p>Desenvolvimento de interfaces gráficas e trouch para supervisão e controle de processos industriais.</p>
 
 <div class="picture">
-	<img src="./images/supervisorio.jpg" alt="Sistema supervisório de cervejaria">
+	<a href="./images/supervisorio.jpg">
+		<img src="./images/supervisorio.jpg" alt="Sistema supervisório de cervejaria">
+	</a>
 </div>
 </div>`;
 
