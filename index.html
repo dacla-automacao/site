@@ -1,70 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-   <link rel="apple-touch-icon" sizes="180x180" href="./image/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="./image/favicon-16x16.png">
-   <link rel="manifest" href="./image/site.webmanifest">
 
-   <title>Dacla Automação</title>
-   <link rel="stylesheet" href="./styles/styles.css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+	<link rel="manifest" href="./images/site.webmanifest">
+	<!-- end favicon -->
+
+	<title>Dacla Automação</title>
+	<link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
-   <div id="coluna">
-      <!-- Cabeçalho -->
-      <header>
-         <a href="./index.html">
-            <image id="logo" src="./image/logo.png" alt="Logo da empresa Dacla Automação">
-         </a>
-      </header>
-      <!-- Corpo -->
-      <section>
-         <!-- Menu -->
-         <nav>
-            <ul>
-               <li id="1" class="bt1" onclick="direciona(this)"><strong>Sobre Nós</strong></li>
-               <li id="2" onclick="direciona(this)"><strong>Serviços</strong></li>
-               <li id="3" onclick="direciona(this)"><strong>Produtos</strong></li>
-               <li id="4" onclick="direciona(this)"><strong>Downloads</strong></li>
-               <li id="5" onclick="direciona(this)"><strong>Contato</strong></li>
-            </ul>
-         </nav>
-         <!-- Texto -->
-         <article id="texto">
-            <h1>Sobre Nós</h1>
-            <p>
-               DACLA Automação é uma empresa desenvolvedora de;
-            </p>
-               <li>Sistemas Embarcados</li>
-               <li>Sistemas Web</li>
-               <li>Softwares Multiplataforma</li>
-               <li>Aplicações Mobile</li>
-               <li>Automação Industrial - CLPs</li>
-               <li>IHM - Interfaces Homem-Máquina</li>
-            <p>
-               Criada em 2020 pelo CEO Daniel Clarinda. Desenvolvemos sistemas inteligentes e personalizados voltados a automatização de processos. Do hardware a interface do usuário.
-            </p>
-            <p>
-               Usando stacks modernas conseguimos desenvolver projetos de automatização industriais, residenciais e artísticas de forma rápida, responsiva e multiplataforma.
-            </p>
-         </article>
-   
-      </section>
-   </div>
-   <!-- Rodapé -->
-   <footer>
-      <strong>
-         Copyright &copy;2021 - by DACLA Automação no 
-         <a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank">YouTube</a> &
-         <a href="http://instagram.com/daclaautomacao" target="_blank">Instagram</a>
-      </strong>
-   </footer>
+	<header>
+		<a href="./index.html">
+			<image class="logo" src="./images/logo.png" alt="Logo da empresa Dacla Automação">
+		</a>
+	</header>
 
-   <script lang="JavaScript" src="./main.js"></script>
+	<nav>
+		<a class="noSelected" onclick="handleContent(this)" name="services"><strong>Serviços</strong></a>
+		<a class="noSelected" onclick="handleContent(this)" name="products"><strong>Produtos</strong></a>
+		<a class="noSelected" onclick="handleContent(this)" name="downloads"><strong>Downloads</strong></a>
+		<a class="noSelected" onclick="handleContent(this)" name="aboutUs"><strong>Sobre Nós</strong></a>
+		<a class="noSelected" onclick="handleContent(this)" name="contact"><strong>Contato</strong></a>
+	</nav>
+	
+	<section>
+		<article class="content">#</article>
+	</section>
+
+	<footer>
+		Copyright &copy;2021 - by 
+		<a href="./index.html"><strong>DACLA Automação</strong></a>
+		no
+		<a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank"><strong>YouTube</strong></a> &
+		<a href="http://instagram.com/daclaautomacao" target="_blank"><strong>Instagram</strong></a>
+  </footer>
+
+	<script lang="JavaScript" src="./main.js"></script>
 </body>
+
 </html>
