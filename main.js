@@ -94,7 +94,7 @@ const products = `
 <div class="item">
 <h4><strong>Automação do processo de fabricação de Paver e Lajotas.</strong></h4>
 
-<p>Foi desenvolvido um controlador programável, a fim de converter a máquina originalmente de processo manual para automático. A automação aumentou a produção e resultou em uma maior consistência da qualidade do produto.</p>
+<p>Nesse projeto foi desenvolvido um controlador programável, a fim de converter a máquina originalmente de processo manual para automático. A automação aumentou a produção e resultou em uma maior consistência da qualidade do produto.</p>
 <br>
 <div id='video'>
 	<iframe class='responsive-iframe' src='https://www.youtube.com/embed/Bj9OIfq1y4I' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
