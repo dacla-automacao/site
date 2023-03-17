@@ -7,44 +7,225 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-	<link rel="manifest" href="./images/site.webmanifest">
-	<!-- end favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./src/assets/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./src/assets/images/favicon-16x16.png">
+	<link rel="manifest" href="./src/assets/images/site.webmanifest">
 
 	<title>Dacla Automação</title>
-	<link rel="stylesheet" href="./styles/main.css?v=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="./src/css/video.css?version=2">
+	<!-- <link rel="stylesheet" href="./src/css/whatsapp.css?version=2"> -->
 </head>
 
-<body>
-	<header>
-		<a href="./index.html">
-			<image class="logo" src="./images/logo.png" alt="Logo da empresa Dacla Automação">
+<body class="user-select-none">
+	<!-- header -->
+	<header class="container text-center p-4 mb-2">
+		<a href="/">
+			<image src="./src/assets/images/logo.png" alt="Logo da empresa Dacla Automação">
 		</a>
 	</header>
 
-	<nav>
-		<a class="noSelected" onclick="handleContent(this)" name="services"><strong>Serviços</strong></a>
-		<a class="noSelected" onclick="handleContent(this)" name="products"><strong>Produtos</strong></a>
-		<a class="noSelected" onclick="handleContent(this)" name="downloads"><strong>Downloads</strong></a>
-		<a class="noSelected" onclick="handleContent(this)" name="aboutUs"><strong>Sobre Nós</strong></a>
-		<a class="noSelected" onclick="handleContent(this)" name="contact"><strong>Contato</strong></a>
-	</nav>
-	
-	<section>
-		<article class="content">#</article>
+	<!-- navbar -->
+	<div class="container">
+		<nav id="menu" class="row px-2">
+			<button id="btn-services" class="col btn btn-primary m-1" onclick="getContent(this.id)">Serviços</button>
+			<button id="btn-products" class="col btn btn-primary m-1" onclick="getContent(this.id)">Produtos</button>
+			<button id="btn-downloads" class="col btn btn-primary m-1" onclick="getContent(this.id)">Downloads</button>
+			<button id="btn-about" class="col btn btn-primary m-1" onclick="getContent(this.id)">Sobre</button>
+			<button id="btn-contact" class="col btn btn-primary m-1" onclick="getContent(this.id)">Contato</button>
+		</nav>
+	</div>
+
+	<!-- main -->
+	<section id="main-content" class="container">
+
+		<!-- services -->
+		<div id="services-content">
+			<!-- item -->
+			<hr>
+			<div class="row mb-3 p-3">
+				<div class="col-sm-6">
+					<h4>Sistemas Embarcados</h4>
+					<p>
+						Fabricamos Placas de Circuito Impresso usando os microcontroladores e processadores mais difundidos do mercado.
+						<br>
+						Tudo sobre medida para atender as mais diversas necessidades da industria 4.0, IoT, automação residencial, automação de máquinas, interfaces artísticas e musicais.
+					</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<a href="./src/assets/images/sistema-embarcado.jpg">
+						<img class="w-75" src="./src/assets/images/sistema-embarcado.jpg" alt="Foto de um sistema embarcado">
+					</a>
+				</div>
+			</div>
+
+			<!-- item -->
+			<hr>
+			<div class="row mb-3 p-3">
+				<div class="col-sm-6">
+					<h4>Aplicações WEB</h4>
+					<p>
+						No desenvolvimento WEB usamos as Stacks mais populares para criar Sites, Dashboards, SPAs, Apps, Games entre outros.
+					</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<a href="./src/assets/images/dashboard.png">
+						<img class="w-75" src="./src/assets/images/dashboard.png" alt="Imagem de um painel de controle web - Dashboard">
+					</a>
+				</div>
+			</div>
+
+			<!-- item -->
+			<hr>
+			<div class="row mb-3 p-3">
+				<div class="col-sm-6">
+					<h4>Softwares Desktop Multiplataforma</h4>
+					<p>
+						Aproveitamos a beleza e responsividade das tecnologias WEB para desenvolver programas para sistemas operacionais como Windows e Linux.
+					</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<a href="./src/assets/images/weather.jpg">
+						<img class="w-75" src="./src/assets/images/weather.jpg" alt="Exemplo que software desenvolvido com electron - Weather">
+					</a>
+				</div>
+			</div>
+
+			<!-- item -->
+			<hr>
+			<div class="row mb-3 p-3">
+				<div class="col-sm-6">
+					<h4>Aplicações Mobile</h4>
+					<p>Aplicativos nativos para smartphones Android e iOS.</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<a href="./src/assets/images/mobile-app.png">
+						<img class="w-75" src="./src/assets/images/mobile-app.png" alt="Exemplo de aplicações mobile">
+					</a>
+				</div>
+			</div>
+
+			<!-- item -->
+			<hr>
+			<div class="row mb-3 p-3">
+				<div class="col-sm-6">
+					<h4>Programação de CLPs</h4>
+					<p>Automatização de processos industriais com controladores lógicos programáveis(CLPs).</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<a href="./src/assets/images/clp-ladder.png">
+						<img class="w-75" src="./src/assets/images/clp-ladder.png" alt="CLP Clic02 WEG progamado em Ladder">
+					</a>
+				</div>
+			</div>
+
+			<!-- item -->
+			<hr>
+			<div class="row mb-3 p-3">
+				<div class="col-sm-6">
+					<h4>Desenvolvimento de IHMs</h4>
+					<p>Interfaces gráficas touch screen para supervisão e controle de processos industriais.</p>
+				</div>
+				<div class="col-sm-6 text-center">
+					<a href="./src/assets/images/supervisorio.jpg">
+						<img class="w-75" src="./src/assets/images/supervisorio.jpg" alt="Sistema supervisório de cervejaria">
+					</a>
+				</div>
+			</div>
+			<!-- end itens -->
+		</div>
+
+		<!-- products -->
+		<div id="products-content">
+			<hr>
+			<div class="mb-3 p-3">
+				<h4>Processo de fabricação de Pavers e Lajotas.</h4>
+				<p>
+					Nesse projeto foi desenvolvido um controlador programável sob medida, a fim de converter a máquina originalmente de processo manual para automático. A automação aumentou a produção e resultou em uma maior consistência da qualidade do produto.
+				</p>
+				<div id='product-video'>
+					<iframe 
+						class='responsive-iframe' 
+						src='https://www.youtube.com/embed/Bj9OIfq1y4I' 
+						title='YouTube video player' 
+						frameborder='0' 
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
+						allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+		</div>
+
+		<!-- Downloads -->
+		<div id="downloads-content">
+			<hr>
+			<div class="mb-3 p-3 text-center">
+				<p>
+					Nenhum item disponível.
+				</p>
+			</div>
+		</div>
+
+		<!-- about Us -->
+		<div id="about-content">
+			<hr>
+			<div class="mb-3 p-3">
+				<p>
+					<strong>DACLA Automação</strong> é uma empresa desenvolvedora de;
+				</p>
+				
+				<ul>
+					<li>Sistemas Embarcados</li>
+					<li>Aplicações WEB</li>
+					<li>Softwares Desktop Multiplataforma</li>
+					<li>Aplicações Mobile</li>
+					<li>Programação de CLPs</li>
+					<li>IHMs</li>
+				</ul>
+				
+				<p>
+					Criada em 2020 pelo <strong>CEO Daniel Clarinda</strong>. Desenvolvemos sistemas inteligentes e personalizados voltados a automatização de processos, do hardware a interface do usuário. Usando Stacks modernas, conseguimos desenvolver projetos de automacão industrial, residencial e artística de forma rápida, responsiva e multiplataforma.
+				</p>
+			</div>
+		</div>
+
+		<!-- contact -->
+		<div id="contact-content">
+			<hr>
+			<div class="mb-3 p-3">
+				<h4>Orçamentos ou sugestões.</h4>
+				<p>
+					Atendemos de Segunda a Sexta-feira das 8:00h as 18:00h.
+				</p>
+				<p>
+					Fone (WhatsApp): <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5547997052402" target="_blank">(47) 99705-2402</a>
+					<br>
+					E-mail: <a href='#'>dacla.automacao@hotmail.com</a>
+				</p>
+				<p>
+					Dacla Automação no 
+					<a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank">YouTube</a> e 
+					<a href="http://instagram.com/daclaautomacao" target="_blank">Instagram</a>
+				</p>
+			</div>
+		</div>
+
 	</section>
 
-	<footer>
-		Copyright &copy;2021 - by 
-		<a href="./index.html"><strong>DACLA Automação</strong></a>
-		no
-		<a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank"><strong>YouTube</strong></a> &
-		<a href="http://instagram.com/daclaautomacao" target="_blank"><strong>Instagram</strong></a>
-  </footer>
+	<!-- footer -->
+	<footer class="text-center p-2 mt-5" style="font-size: .8rem;">
+		<div>
+			&copy;<span id="copyright-year">2020</span> Copyright <a href="/">DACLA Automação</a>
+		</div>
+		<div>
+			Siga-nos no
+			<a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank">YouTube</a> e
+			<a href="http://instagram.com/daclaautomacao" target="_blank">Instagram</a>
+		</div>
+	</footer>
 
-	<script lang="JavaScript" src="./main.js?v=1"></script>
+	<script src="./src/js/main.js?version=2"></script>
+
 </body>
-
 </html>
