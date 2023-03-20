@@ -1,4 +1,4 @@
-const initialContent = 'btn-services';          //id_button
+const initialContent = 'btn-products';          //id_button
 
 function getContent(id_button) {
   hideAllContent();
