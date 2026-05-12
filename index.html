@@ -1,240 +1,479 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./src/assets/images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./src/assets/images/favicon-16x16.png">
-	<link rel="manifest" href="./src/assets/images/site.webmanifest">
+  <title>DACLA Automação - Industria 4.0, Sistemas Embarcados e Programação</title>
+  <meta name="description" content="Soluções em automação industrial 4.0, IoT, sistemas embarcados, CLPs, IHMs, inversores de frequência, ensaios HIPOT e reparo de placas eletrônicas. Engenharia sob medida.">
+  <meta name="author" content="DACLA Automação">
+  <meta name="theme-color" content="#0a2540">
+  <link rel="canonical" href="https://danielclarinda.github.io/site/">
 
-	<title>Dacla Automação</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="DACLA Automação">
+  <meta property="og:title" content="DACLA Automação — Engenharia em automação industrial e eletrônica">
+  <meta property="og:description" content="Projetos sob medida em automação 4.0, sistemas embarcados, CLPs, IHMs, inversores de frequência e ensaios elétricos.">
+  <meta property="og:url" content="https://danielclarinda.github.io/site/">
+  <meta property="og:image" content="https://danielclarinda.github.io/site/assets/img/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DACLA Automação">
+  <meta name="twitter:description" content="Automação industrial 4.0, sistemas embarcados e eletrônica sob medida.">
+  <meta name="twitter:image" content="https://danielclarinda.github.io/site/assets/img/logo.png">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DACLA Automação",
+    "url": "https://danielclarinda.github.io/site/",
+    "logo": "https://danielclarinda.github.io/site/assets/img/logo.png",
+    "foundingDate": "2020",
+    "founder": {
+      "@type": "Person",
+      "name": "Daniel Clarinda",
+      "jobTitle": "CEO"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+55-47-99705-2402",
+      "contactType": "customer support",
+      "areaServed": "BR",
+      "availableLanguage": ["Portuguese"]
+    },
+    "sameAs": [
+      "https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w"
+    ],
+    "knowsAbout": [
+      "Automação Industrial 4.0",
+      "IoT",
+      "Sistemas Embarcados",
+      "CLPs",
+      "IHMs",
+      "Inversores de Frequência",
+      "Ensaios HIPOT",
+      "Megômetro",
+      "Reparo de placas eletrônicas",
+      "Desenvolvimento de Software"
+    ]
+  }
+  </script>
 </head>
+<body>
 
-<body class="user-select-none mx-auto" style="max-width: 1000px;">
-	<!-- header -->
-	<header class="container text-center p-4 mb-2">
-		<a href="/">
-			<image src="./src/assets/images/logo.png" alt="Logo da empresa Dacla Automação">
-		</a>
-	</header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-	<!-- navbar -->
-	<nav class="container">
-		<div id="menu" class="bg-primary rounded-1 d-flex flex-wrap">
-			<button id="btn-services" class="btn btn-primary flex-fill" onclick="getContent(this.id)">Serviços</button>
-			<button id="btn-products" class="btn btn-primary flex-fill" onclick="getContent(this.id)">Produtos</button>
-			<button id="btn-downloads" class="btn btn-primary flex-fill" onclick="getContent(this.id)">Downloads</button>
-			<button id="btn-about" class="btn btn-primary flex-fill" onclick="getContent(this.id)">Sobre</button>
-			<button id="btn-contact" class="btn btn-primary flex-fill" onclick="getContent(this.id)">Contato</button>
-		</div>
-	</nav>
-	
-	<!-- main -->
-	<section id="main-content" class="container">
-		<!-- services -->
-		<div id="services-content">
-			<!-- item -->
-			<hr>
-			<div class="row mb-3 p-3">
-				<div class="col-sm-6">
-					<h4>Sistemas Embarcados</h4>
-					<p>
-						Fabricamos Placas de Circuito Impresso usando os microcontroladores e processadores mais difundidos do mercado.
-						<br>
-						Tudo sobre medida para atender as mais diversas necessidades da industria 4.0, IoT, automação residencial, automação de máquinas, interfaces artísticas e musicais.
-					</p>
-				</div>
-				<div class="col-sm-6 text-center">
-					<a href="./src/assets/images/sistema-embarcado.jpg">
-						<img class="w-75" src="./src/assets/images/sistema-embarcado.jpg" alt="Foto de um sistema embarcado">
-					</a>
-				</div>
-			</div>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="DACLA Automação — página inicial">
+        <img src="assets/img/logo.png" alt="DACLA Automação" width="160" height="44">
+      </a>
 
-			<!-- item -->
-			<hr>
-			<div class="row mb-3 p-3">
-				<div class="col-sm-6">
-					<h4>Aplicações WEB</h4>
-					<p>
-						No desenvolvimento WEB usamos as Stacks mais populares para criar Sites, Dashboards, SPAs, Apps, Games entre outros.
-					</p>
-				</div>
-				<div class="col-sm-6 text-center">
-					<a href="./src/assets/images/dashboard.png">
-						<img class="w-75" src="./src/assets/images/dashboard.png" alt="Imagem de um painel de controle web - Dashboard">
-					</a>
-				</div>
-			</div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
 
-			<!-- item -->
-			<hr>
-			<div class="row mb-3 p-3">
-				<div class="col-sm-6">
-					<h4>Softwares Desktop Multiplataforma</h4>
-					<p>
-						Aproveitamos a beleza e responsividade das tecnologias WEB para desenvolver programas para sistemas operacionais como Windows e Linux.
-					</p>
-				</div>
-				<div class="col-sm-6 text-center">
-					<a href="./src/assets/images/weather.jpg">
-						<img class="w-75" src="./src/assets/images/weather.jpg" alt="Exemplo que software desenvolvido com electron - Weather">
-					</a>
-				</div>
-			</div>
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <span class="flag-br" role="img" aria-label="Brasil" title="Empresa brasileira">
+          <svg viewBox="0 0 28 20" aria-hidden="true">
+            <rect width="28" height="20" fill="#009c3b"/>
+            <path d="M14 3 L25 10 L14 17 L3 10 Z" fill="#ffdf00"/>
+            <circle cx="14" cy="10" r="4" fill="#002776"/>
+          </svg>
+        </span>
+      </nav>
+    </div>
+  </header>
 
-			<!-- item -->
-			<hr>
-			<div class="row mb-3 p-3">
-				<div class="col-sm-6">
-					<h4>Aplicações Mobile</h4>
-					<p>Aplicativos nativos para smartphones Android e iOS.</p>
-				</div>
-				<div class="col-sm-6 text-center">
-					<a href="./src/assets/images/mobile-app.png">
-						<img class="w-75" src="./src/assets/images/mobile-app.png" alt="Exemplo de aplicações mobile">
-					</a>
-				</div>
-			</div>
+  <main id="conteudo">
 
-			<!-- item -->
-			<hr>
-			<div class="row mb-3 p-3">
-				<div class="col-sm-6">
-					<h4>Programação de CLPs</h4>
-					<p>Automatização de processos industriais com controladores lógicos programáveis(CLPs).</p>
-				</div>
-				<div class="col-sm-6 text-center">
-					<a href="./src/assets/images/clp-ladder.png">
-						<img class="w-75" src="./src/assets/images/clp-ladder.png" alt="CLP Clic02 WEG progamado em Ladder">
-					</a>
-				</div>
-			</div>
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Diagramas · Automação · Eletrônica · Programação · Ensaios</p>
+        <h1 id="heroTitle">Soluções industriais sob medida.</h1>
+        <p class="hero-lead">
+          Projetamos, programamos e damos manutenção em sistemas que controlam processos reais: placas eletrônicas, CLPs, IHMs, inversores, sensores e o software que conecta tudo.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#servicos">Ver serviços</a>
+          <a class="btn btn-ghost" href="#contato">Solicitar orçamento</a>
+        </div>
+      </div>
+    </section>
 
-			<!-- item -->
-			<hr>
-			<div class="row mb-3 p-3">
-				<div class="col-sm-6">
-					<h4>Desenvolvimento de IHMs</h4>
-					<p>Interfaces gráficas touch screen para supervisão e controle de processos industriais.</p>
-				</div>
-				<div class="col-sm-6 text-center">
-					<a href="./src/assets/images/supervisorio.jpg">
-						<img class="w-75" src="./src/assets/images/supervisorio.jpg" alt="Sistema supervisório de cervejaria">
-					</a>
-				</div>
-			</div>
-			<!-- end itens -->
-		</div>
+    <!-- ============ SERVIÇOS ============ -->
+    <section id="servicos" class="section" aria-labelledby="servicosTitle">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">O que fazemos</p>
+          <h2 id="servicosTitle">Serviços</h2>
+          <p class="section-sub">Atuamos em projetos completos ou pontuais — desde a concepção de hardware até a integração com sistemas supervisórios.</p>
+        </header>
 
-		<!-- products -->
-		<div id="products-content">
-			<!-- item -->
-			<hr>
-			<div class="mb-3 p-3">
-				<h4>Processo de fabricação de Pavers e Lajotas.</h4>
-				<p>
-					Nesse projeto foi desenvolvido um controlador programável sob medida, a fim de converter a máquina originalmente de processo manual para automático. A automação aumentou a produção e resultou em uma maior consistência da qualidade do produto.
-				</p>
-				<div class="container-sm text-center" style="height: 50rem; max-height: 337px; max-width: 600px;">
-					<iframe 
-						class='w-100 h-100'
-						src='https://www.youtube.com/embed/Bj9OIfq1y4I' 
-						title='YouTube video player' 
-						frameborder='0' 
-						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
-						allowfullscreen>
-					</iframe>
-				</div>
-			</div>
+        <ul class="services-grid">
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 4v14M15 4v14"/></svg>
+            </span>
+            <h3>Automação Industrial 4.0</h3>
+            <p>Integração de máquinas, sensores e dados de chão de fábrica com sistemas supervisórios e dashboards em tempo real.</p>
+          </li>
 
-			<!-- item -->
-			<hr>
-			<div class="mb-3 p-3">
-				<h4>Programação Arduino, ESP e Raspberry PI.</h4>
-				<p>
-					Nesse projeto foi desenvolvido um controlador de temperatura Auto-PID de 6 canais do tipo J.
-					<span class="text-info">Mais detalhes em breve</span>.
-				</p>
-				<div class="text-center">
-					<img class="w-25" src="./src/assets/images/controladorPID.jpg" alt="Display do controlador de temperatura PID">
-				</div>
-			</div>
-		</div>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 1 7 0M5.5 5.5a9 9 0 0 1 13 0M12 16v4"/></svg>
+            </span>
+            <h3>IoT</h3>
+            <p>Dispositivos conectados, telemetria, controle remoto e protocolos MQTT, HTTP e Modbus para coleta confiável de dados em campo.</p>
+          </li>
 
-		<!-- Downloads -->
-		<div id="downloads-content">
-			<hr>
-			<div class="mb-3 p-3 text-center">
-				<p>
-					Nenhum item disponível.
-				</p>
-			</div>
-		</div>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="6" width="12" height="12" rx="1.5"/><path d="M9 3v3M12 3v3M15 3v3M9 18v3M12 18v3M15 18v3M3 9h3M3 12h3M3 15h3M18 9h3M18 12h3M18 15h3"/></svg>
+            </span>
+            <h3>Sistemas Embarcados</h3>
+            <p>Projeto e fabricação de placas com STM32, ESP32, AVR e PIC para aplicações industriais, residenciais e científicas.</p>
+          </li>
 
-		<!-- about Us -->
-		<div id="about-content">
-			<hr>
-			<div class="mb-3 p-3">
-				<p>
-					<strong>DACLA Automação</strong> é uma empresa desenvolvedora de;
-				</p>
-				
-				<ul>
-					<li>Sistemas Embarcados</li>
-					<li>Aplicações WEB</li>
-					<li>Softwares Desktop Multiplataforma</li>
-					<li>Aplicações Mobile</li>
-					<li>Programação de CLPs</li>
-					<li>IHMs</li>
-				</ul>
-				
-				<p>
-					Criada em 2020 pelo <strong>CEO Daniel Clarinda</strong>. Desenvolvemos sistemas inteligentes e personalizados voltados a automatização de processos, do hardware a interface do usuário. Usando Stacks modernas, conseguimos desenvolver projetos de automacão industrial, residencial e artística de forma rápida, responsiva e multiplataforma.
-				</p>
-			</div>
-		</div>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg>
+            </span>
+            <h3>Desenvolvimento de Software</h3>
+            <p>Aplicações web, desktop e mobile para integração, supervisão e gestão de processos. Foco em confiabilidade e manutenção.</p>
+          </li>
 
-		<!-- contact -->
-		<div id="contact-content">
-			<hr>
-			<div class="mb-3 p-3">
-				<h4>Orçamentos ou sugestões.</h4>
-				<p>
-					Atendemos de Segunda a Sexta-feira das 8:00h as 18:00h.
-				</p>
-				<p>
-					Fone (WhatsApp): <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5547997052402" target="_blank">(47) 99705-2402</a>
-					<br>
-					E-mail: <a href='#'>dacla.automacao@hotmail.com</a>
-				</p>
-				<p>
-					Dacla Automação no 
-					<a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank">YouTube</a> e 
-					<a href="http://instagram.com/daclaautomacao" target="_blank">Instagram</a>
-				</p>
-			</div>
-		</div>
-	</section>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M7 9h2v6H7zM11 9h2v6h-2zM15 9h2v6h-2z"/></svg>
+            </span>
+            <h3>Programação de CLPs</h3>
+            <p>Lógica Ladder, ST e FBD para WEG, Siemens, Schneider, Delta e similares. Programação, comissionamento e retrofit.</p>
+          </li>
 
-	<!-- footer -->
-	<footer class="text-center p-2 mt-5" style="font-size: .8rem;">
-		<div>
-			&copy;<span id="copyright-year">2020</span> Copyright <a href="/">DACLA Automação</a>
-		</div>
-		<div>
-			Siga-nos no
-			<a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank">YouTube</a> e
-			<a href="http://instagram.com/daclaautomacao" target="_blank">Instagram</a>
-		</div>
-	</footer>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M7 20h10M9 8h6M9 12h6"/></svg>
+            </span>
+            <h3>IHMs e Supervisórios</h3>
+            <p>Telas touch screen e sistemas SCADA personalizados para operação, alarmes, históricos e relatórios de produção.</p>
+          </li>
 
-	<script src="./src/js/main.js?version=2-0-3"></script>
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg>
+            </span>
+            <h3>Inversores de Frequência</h3>
+            <p>Parametrização, instalação e integração de inversores com lógica de processo. Soft-start, controle de velocidade e torque.</p>
+          </li>
+
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v6M9 6h6M5 14a7 7 0 0 0 14 0M5 14v4M19 14v4M3 18h18"/></svg>
+            </span>
+            <h3>Ensaios HIPOT e Megômetro</h3>
+            <p>Testes de rigidez dielétrica e resistência de isolação em equipamentos, cabos, painéis e motores conforme normas técnicas.</p>
+          </li>
+
+          <li class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l4-4 3 3-4 4zM10 13l7 7 3-3-7-7zM8 9l7 7"/></svg>
+            </span>
+            <h3>Reparo de Placas Eletrônicas</h3>
+            <p>Diagnóstico, rework e substituição de componentes SMD/THT em placas industriais, fontes, drivers e controladores.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SESSÕES VISUAIS ============ -->
+    <section class="visual-sections" aria-label="Áreas técnicas de atuação">
+
+      <article class="visual-block" aria-labelledby="vb1">
+        <div class="visual-image" style="background-image:url('assets/img/clp-ladder.png')" role="img" aria-label="Trecho de programação em Ladder em um CLP">
+          <span class="placeholder-tag">programação Ladder</span>
+        </div>
+        <div class="visual-text">
+          <p class="eyebrow">CLPs</p>
+          <h3 id="vb1">Programação Ladder, ST e FBD</h3>
+          <p>
+            Lógica industrial estruturada conforme IEC 61131-3. Trabalhamos com Clic02, TPW, S7-1200, M221, DVP e linhas equivalentes, incluindo redes Modbus RTU/TCP, Profinet e EtherCAT.
+          </p>
+        </div>
+      </article>
+
+      <article class="visual-block reverse" aria-labelledby="vb2">
+        <div class="visual-image" style="background-image:url('assets/img/sistema-embarcado.jpg')" role="img" aria-label="Placa de circuito impresso com microcontrolador">
+          <span class="placeholder-tag">PCBs e firmware</span>
+        </div>
+        <div class="visual-text">
+          <p class="eyebrow">Eletrônica</p>
+          <h3 id="vb2">PCBs e firmware em C/C++</h3>
+          <p>
+            Projeto de esquemático, layout, prototipagem e firmware bare-metal ou com RTOS. Foco em robustez elétrica, EMC e custo de produção viável para pequenas e médias séries.
+          </p>
+        </div>
+      </article>
+
+      <article class="visual-block" aria-labelledby="vb3">
+        <div class="visual-image" style="background-image:url('assets/img/supervisorio.jpg')" role="img" aria-label="Tela de sistema supervisório industrial">
+          <span class="placeholder-tag">supervisórios / IHMs</span>
+        </div>
+        <div class="visual-text">
+          <p class="eyebrow">Supervisão</p>
+          <h3 id="vb3">IHMs e SCADA sob medida</h3>
+          <p>
+            Telas operacionais claras, com alarmes priorizados, históricos e receitas. Quando o cliente prefere, entregamos supervisórios web rodando localmente — sem dependência de licenças mensais.
+          </p>
+        </div>
+      </article>
+
+      <article class="visual-block reverse" aria-labelledby="vb4">
+        <div class="visual-image placeholder" role="img" aria-label="Espaço reservado para imagem de ensaio HIPOT">
+          <span class="placeholder-tag">&lt;insira sua imagem aqui&gt; — ensaios HIPOT</span>
+        </div>
+        <div class="visual-text">
+          <p class="eyebrow">Ensaios elétricos</p>
+          <h3 id="vb4">HIPOT e Megômetro</h3>
+          <p>
+            Avaliamos isolação de motores, transformadores, painéis e cabos antes da energização ou após manutenções. Emitimos relatórios técnicos com valores medidos e parecer.
+          </p>
+        </div>
+      </article>
+
+      <article class="visual-block" aria-labelledby="vb5">
+        <div class="visual-image placeholder" role="img" aria-label="Espaço reservado para imagem de bancada de reparo eletrônico">
+          <span class="placeholder-tag">&lt;insira sua imagem aqui&gt; — bancada de reparo</span>
+        </div>
+        <div class="visual-text">
+          <p class="eyebrow">Manutenção</p>
+          <h3 id="vb5">Reparo de placas eletrônicas</h3>
+          <p>
+            Diagnóstico com instrumentação adequada, troca de componentes SMD e THT, e testes funcionais. Quando o reparo não é viável, avaliamos a substituição por uma placa equivalente projetada por nós.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============ PRODUTOS ============ -->
+    <section id="produtos" class="section section-alt" aria-labelledby="produtosTitle">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Realizações</p>
+          <h2 id="produtosTitle">Produtos e Projetos</h2>
+          <p class="section-sub">Uma amostra de projetos entregues. Cada produto é desenvolvido para uma aplicação específica do cliente.</p>
+        </header>
+
+        <div class="products-grid">
+
+          <article class="product-card">
+            <div class="product-media">
+              <img src="assets/img/controladorPID.jpg" alt="Controlador de temperatura PID de 6 canais" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <span class="product-tag">Controle</span>
+              <h3>Auto-PID 6 canais</h3>
+              <p>Controlador de temperatura com 6 canais para termopar tipo J, ajuste automático de parâmetros PID e interface local.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media product-video">
+              <iframe
+                src="https://www.youtube.com/embed/Bj9OIfq1y4I"
+                title="Automação de máquina de fabricação de pavers e lajotas"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <div class="product-body">
+              <span class="product-tag">Retrofit</span>
+              <h3>Automação de prensa de pavers</h3>
+              <p>Conversão de máquina manual em ciclo automático com controlador dedicado. Ganho de produção e maior consistência da peça.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media placeholder-media">
+              <span class="placeholder-tag">&lt;insira sua imagem aqui&gt;</span>
+            </div>
+            <div class="product-body">
+              <span class="product-tag">Em desenvolvimento</span>
+              <h3>Novo projeto</h3>
+              <p>Espaço reservado para um próximo produto. O conteúdo será atualizado conforme novas entregas forem concluídas.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOWNLOADS ============ -->
+    <section id="downloads" class="section" aria-labelledby="downloadsTitle">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Materiais</p>
+          <h2 id="downloadsTitle">Downloads</h2>
+          <p class="section-sub">Catálogos, datasheets e documentos técnicos ficarão disponíveis nesta área.</p>
+        </header>
+
+        <div class="downloads-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/>
+          </svg>
+          <p>Nenhum arquivo disponível no momento.</p>
+          <p class="muted">Em breve disponibilizaremos catálogos, manuais e firmwares para download.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section id="sobre" class="section section-alt" aria-labelledby="sobreTitle">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Sobre nós</p>
+          <h2 id="sobreTitle">Engenharia, prática de chão de fábrica e código.</h2>
+          <p>
+            A <strong>DACLA Automação</strong> foi criada em 2020 por <strong>Daniel Clarinda</strong> — técnico em eletrotécnica, com formação em engenharia elétrica e mais de dez anos atuando em montagem, instalação e manutenção de máquinas industriais, com ênfase em programação de CLPs.
+          </p>
+          <p>
+            A empresa nasceu para resolver problemas reais de quem opera equipamentos. Trabalhamos do hardware ao supervisório, sem terceirizar o que é essencial, e priorizamos soluções duráveis em vez de implementações descartáveis.
+          </p>
+        </div>
+        <aside class="about-stats" aria-label="Números da empresa">
+          <div>
+            <strong>2020</strong>
+            <span>Ano de fundação</span>
+          </div>
+          <div>
+            <strong>10+</strong>
+            <span>Anos de experiência industrial</span>
+          </div>
+          <div>
+            <strong>BR</strong>
+            <span>Atuação em todo o Brasil</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (CONTATO) ============ -->
+  <footer id="contato" class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="DACLA Automação" width="160" height="44" loading="lazy">
+        <p class="muted">Automação industrial, sistemas embarcados e eletrônica sob medida.</p>
+        <span class="flag-br" role="img" aria-label="Empresa brasileira" title="Brasil">
+          <svg viewBox="0 0 28 20" aria-hidden="true">
+            <rect width="28" height="20" fill="#009c3b"/>
+            <path d="M14 3 L25 10 L14 17 L3 10 Z" fill="#ffdf00"/>
+            <circle cx="14" cy="10" r="4" fill="#002776"/>
+          </svg>
+          <span>Brasil</span>
+        </span>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://wa.me/5547997052402" target="_blank" rel="noopener">
+              WhatsApp: (47) 99705-2402
+            </a>
+          </li>
+          <li>
+            <a href="mailto:dacla.automacao@hotmail.com">
+              dacla.automacao@hotmail.com
+            </a>
+          </li>
+          <li class="muted">Seg. a Sex. — 08h às 18h</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Empresa</h4>
+        <ul class="footer-list">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#produtos">Produtos e Projetos</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#downloads">Downloads</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; <span id="year"></span> DACLA Automação. Todos os direitos reservados.</span>
+        <span class="muted">CNPJ sob consulta</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ WHATSAPP FLUTUANTE ============ -->
+  <a
+    class="whatsapp-fab"
+    href="https://wa.me/5547997052402"
+    target="_blank"
+    rel="noopener"
+    aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3C9 3 3 9 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1 1-3.9-.3-.4A10.7 10.7 0 1 1 16 26.7zm6.1-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.8-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 3.5 1.4 3.5 1 4.2.9.6 0 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts (defer + modular) -->
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
