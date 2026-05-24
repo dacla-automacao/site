@@ -116,12 +116,6 @@ p { color: var(--c-text); }
   color: #fff;
 }
 .btn-primary:hover { background: var(--c-primary-2); transform: translateY(-1px); }
-.btn-ghost {
-  background: transparent;
-  color: var(--c-primary);
-  border-color: var(--c-border);
-}
-.btn-ghost:hover { background: var(--c-surface); border-color: var(--c-primary); }
 
 /* ============================================================
    HEADER — paleta azul (mesma do footer)
@@ -261,9 +255,6 @@ p { color: var(--c-text); }
   margin: 1.25rem 0 1.75rem;
   max-width: 60ch;
 }
-.hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; }
-.hero .btn-ghost { color: #fff; border-color: rgba(255,255,255,.4); }
-.hero .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: #fff; }
 
 /* ============================================================
    SEÇÕES GENÉRICAS
@@ -454,21 +445,6 @@ p { color: var(--c-text); }
 }
 .product-video iframe { aspect-ratio: 16/10; }
 
-.placeholder-media {
-  position: relative;
-  background:
-    linear-gradient(135deg, #eef1f5 0%, #dde3ea 100%);
-}
-.placeholder-media::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: repeating-linear-gradient(45deg, rgba(10,37,64,.05) 0 10px, transparent 10px 20px);
-}
-.placeholder-media .placeholder-tag {
-  color: var(--c-muted);
-  background: rgba(255,255,255,.85);
-}
-
 .product-body { padding: 1.25rem 1.4rem 1.5rem; }
 .product-tag {
   display: inline-block;
@@ -585,6 +561,34 @@ p { color: var(--c-text); }
   flex-wrap: wrap;
 }
 .footer-bottom .muted { color: #8a9db5; }
+
+/* ============================================================
+   PÁGINA 404
+   ============================================================ */
+.err-wrap {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.err-code {
+  font-family: var(--f-mono);
+  color: var(--c-accent-2);
+  letter-spacing: .2em;
+  font-size: .85rem;
+}
+.err-wrap h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--c-primary);
+  margin: .5rem 0 1rem;
+}
+.err-wrap p {
+  color: var(--c-muted);
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+}
 
 /* ============================================================
    BOTÃO WHATSAPP FLUTUANTE
@@ -741,10 +745,6 @@ p { color: var(--c-text); }
 
   .hero-bg { bottom: clamp(160px, 26vh, 220px); }
   .hero-media { height: clamp(160px, 26vh, 220px); }
-}
-
-@media (max-width: 480px) {
-  .hero-cta .btn { flex: 1; }
 }
 
 /* ============================================================

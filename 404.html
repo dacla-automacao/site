@@ -2,44 +2,68 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Página não encontrada — DACLA Automação</title>
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a2540">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"></noscript>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .err-wrap {
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .err-code {
-      font-family: var(--f-mono);
-      color: var(--c-accent-2);
-      letter-spacing: .2em;
-      font-size: .85rem;
-    }
-    .err-wrap h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      color: var(--c-primary);
-      margin: .5rem 0 1rem;
-    }
-    .err-wrap p { color: var(--c-muted); max-width: 480px; margin: 0 auto 1.5rem; }
-  </style>
 </head>
+
 <body>
-  <header class="site-header">
+  <!-- SVG sprite: símbolos reutilizados via <use href="#..."> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="icon-flag-br" viewBox="0 0 28 20">
+      <rect width="28" height="20" fill="#009c3b"/>
+      <path d="M14 3 L25 10 L14 17 L3 10 Z" fill="#ffdf00"/>
+      <circle cx="14" cy="10" r="4" fill="#002776"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="./" aria-label="DACLA Automação — início">
+      <a class="brand" href="./" aria-label="DACLA Automação — página inicial">
         <img src="assets/img/logo.png" alt="DACLA Automação" width="160" height="44">
       </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="./#servicos">Serviços</a></li>
+          <li><a href="./#produtos">Produtos</a></li>
+          <li><a href="./#downloads">Downloads</a></li>
+          <li><a href="./#sobre">Sobre Nós</a></li>
+          <li><a href="./#contato">Contato</a></li>
+        </ul>
+        <span class="flag-br" role="img" aria-label="Brasil" title="Empresa brasileira">
+          <svg aria-hidden="true"><use href="#icon-flag-br"/></svg>
+        </span>
+      </nav>
     </div>
   </header>
 
-  <main class="err-wrap">
+  <main id="conteudo" class="err-wrap">
     <div>
       <span class="err-code">ERRO · 404</span>
       <h1>Página não encontrada</h1>
@@ -47,5 +71,95 @@
       <a class="btn btn-primary" href="./">Voltar para o início</a>
     </div>
   </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contato" class="site-footer" role="contentinfo">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="DACLA Automação" width="160" height="44" loading="lazy">
+        <p class="muted">Soluções industriais sob medida.<br>Do circuito eletrônico à interface do usuário.</p>
+
+        <span class="flag-br" role="img" aria-label="Empresa brasileira" title="Brasil">
+          <svg aria-hidden="true"><use href="#icon-flag-br"/></svg>
+          <span>Brasil</span>
+        </span>
+      </div>
+
+      <!-- SYNC: telefone, e-mail e CNPJ desta seção espelham os do index.html. Manter sincronizados. -->
+      <div>
+        <h4>Contato</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://wa.me/5547997052402" target="_blank" rel="noopener">
+              WhatsApp: (47) 99705-2402
+            </a>
+          </li>
+          <li>
+            <a href="mailto:dacla.automacao@hotmail.com">
+              dacla.automacao@hotmail.com
+            </a>
+          </li>
+          <li class="muted">Seg. a Sex. — 08h às 18h</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Empresa</h4>
+        <ul class="footer-list">
+          <li><a href="./#servicos">Serviços</a></li>
+          <li><a href="./#produtos">Produtos e Projetos</a></li>
+          <li><a href="./#sobre">Sobre Nós</a></li>
+          <li><a href="./#downloads">Downloads</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <ul class="footer-list">
+          <li>
+            <a href="https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w" target="_blank" rel="noopener">
+              YouTube
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; <span id="year"></span> DACLA Automação. Todos os direitos reservados.</span>
+        <span class="muted">CNPJ: 36.147.646/0001-43</span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ============ VOLTAR AO TOPO ============ -->
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Voltar ao topo da página">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M6 14l6-6 6 6"/>
+    </svg>
+  </button>
+
+  <!-- ============ WHATSAPP ICON ============ -->
+  <a
+    class="whatsapp-fab"
+    href="https://wa.me/5547997052402"
+    target="_blank"
+    rel="noopener"
+    aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3C9 3 3 9 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.8A13 13 0 1 0 16 3zm0 23.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1 1-3.9-.3-.4A10.7 10.7 0 1 1 16 26.7zm6.1-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.8-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.6-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 3.5 1.4 3.5 1 4.2.9.6 0 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+  </a>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>DACLA Automação | Projetos, Sistemas Embarcados, Programação e Ensaios</title>
-  <meta name="description" content="Soluções em automação industrial 4.0, IoT, sistemas embarcados, CLPs, IHMs, inversores de frequência, ensaios com HIPOT, Megômetro e desenvolvido e reparo de placas eletrônicas.">
+  <meta name="description" content="Soluções em automação industrial 4.0, IoT, sistemas embarcados, CLPs, IHMs, inversores de frequência, ensaios com HIPOT, Megômetro, desenvolvimento e reparo de placas eletrônicas.">
   <meta name="author" content="DACLA Automação">
   <meta name="theme-color" content="#0a2540">
+  <!-- SYNC: URL canônica https://danielclarinda.github.io/site/ aparece em canonical, og:url, og:image, twitter:image, schema.org (url, logo) e em sitemap.xml. Atualizar em todos. -->
   <link rel="canonical" href="https://danielclarinda.github.io/site/">
   
   <!-- Open Graph -->
@@ -30,7 +31,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-  <link rel="manifest" href="assets/img/site.webmanifest">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
   <!-- Schema.org -->
+  <!-- SYNC: bloco abaixo contém telefone (+55-47-99705-2402), canal do YouTube e URLs canônicas. Todos também aparecem no footer/FAB do index.html e em 404.html. Manter espelhados. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,7 +74,7 @@
     "knowsAbout": [
       "Projetos elétricos",
       "Automação Industrial",
-      "Industria 4.0",
+      "Indústria 4.0",
       "IoT",
       "Sistemas Embarcados",
       "CLPs",
@@ -88,6 +89,15 @@
 </head>
 
 <body>
+  <!-- SVG sprite: símbolos reutilizados via <use href="#..."> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="icon-flag-br" viewBox="0 0 28 20">
+      <rect width="28" height="20" fill="#009c3b"/>
+      <path d="M14 3 L25 10 L14 17 L3 10 Z" fill="#ffdf00"/>
+      <circle cx="14" cy="10" r="4" fill="#002776"/>
+    </symbol>
+  </svg>
+
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   
   <!-- ============ HEADER ============ -->
@@ -114,11 +124,7 @@
         </ul>
         <!-- Brasil flag -->
         <span class="flag-br" role="img" aria-label="Brasil" title="Empresa brasileira">
-          <svg viewBox="0 0 28 20" aria-hidden="true">
-            <rect width="28" height="20" fill="#009c3b"/>
-            <path d="M14 3 L25 10 L14 17 L3 10 Z" fill="#ffdf00"/>
-            <circle cx="14" cy="10" r="4" fill="#002776"/>
-          </svg>
+          <svg aria-hidden="true"><use href="#icon-flag-br"/></svg>
         </span>
       </nav>
     </div>
@@ -139,11 +145,6 @@
           <p class="hero-lead">
             Automatizamos processos e sistemas com o que há de melhor no mercado. Quando os recursos ideais ainda não existem, nós os desenvolvemos.<br>"Do circuito eletrônico à interface do usuário."
           </p>
-          <!-- buttons -->
-          <!-- <div class="hero-cta">
-            <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
-            <a class="btn btn-ghost" href="#contato">Solicitar orçamento</a>
-          </div> -->
         </div>
       </div>
       <!-- background image -->
@@ -166,7 +167,7 @@
         <header class="section-header">
           <p class="eyebrow">O que fazemos</p>
           <h2 id="servicosTitle">Serviços</h2>
-          <p class="section-sub">Atuamos em projetos completos ou pontuais, do hobbysta ao industrial desde a concepção de hardware até a integração com sistemas.</p>
+          <p class="section-sub">Atuamos em projetos completos ou pontuais, do hobbista ao industrial desde a concepção de hardware até a integração com sistemas.</p>
         </header>
         
         <!-- cards -->
@@ -268,117 +269,117 @@
     <!-- ============ SIDE BY SIDE ============ -->
     <section class="visual-sections" aria-label="Áreas técnicas de atuação">
       
-      <article id="vb1" class="visual-block" aria-labelledby="vb1">
-        <div class="visual-image placeholder" style="background-image: url(assets/img/40-industry.png);" role="img" aria-label="Espaço reservado para imagem de chão de fábrica com automação 4.0">
+      <article id="vb1" class="visual-block" aria-labelledby="industria40Title">
+        <div class="visual-image" style="background-image: url('assets/img/40-industry.png');" role="img" aria-label="Chão de fábrica com sistemas de automação 4.0">
           <span class="placeholder-tag">Indústria 4.0</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Indústria 4.0</p>
-          <h3>Integração de chão de fábrica</h3>
+          <h3 id="industria40Title">Integração de chão de fábrica</h3>
           <p>
             Conectamos máquinas, sensores e sistemas legados em arquiteturas modernas. Coleta de dados em tempo real, indicadores de OEE, integração com dashboards customizados — tudo rodando localmente ou em nuvem.
           </p>
         </div>
       </article>
       
-      <article id="vb2" class="visual-block reverse" aria-labelledby="vb2">
-        <div class="visual-image placeholder" style="background-image: url(assets/img/IoT.png);" role="img" aria-label="Espaço reservado para imagem de dispositivos IoT conectados">
+      <article id="vb2" class="visual-block reverse" aria-labelledby="iotTitle">
+        <div class="visual-image" style="background-image: url('assets/img/IoT.png');" role="img" aria-label="Dispositivos IoT conectados">
           <span class="placeholder-tag">IoT</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Conectividade</p>
-          <h3>Telemetria e dispositivos conectados</h3>
+          <h3 id="iotTitle">Telemetria e dispositivos conectados</h3>
           <p>
             Gateways, sensores e protocolos industriais (MQTT, Modbus TCP/RTU, HTTP). Coleta de dados confiável em tempo real, alarmes e controle via dispositivos móveis — sem depender de plataformas terceirizadas.
           </p>
         </div>
       </article>
       
-      <article id="vb3" class="visual-block" aria-labelledby="vb3">
+      <article id="vb3" class="visual-block" aria-labelledby="embarcadosTitle">
         <div class="visual-image" style="background-image:url('assets/img/sistemas-embarcados.png')" role="img" aria-label="Placa de circuito impresso com microcontrolador">
           <span class="placeholder-tag">PCB / Firmware</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Sistemas Embarcados</p>
-          <h3>PCBs e Firmware em C/C++</h3>
+          <h3 id="embarcadosTitle">PCBs e Firmware em C/C++</h3>
           <p>
             Projeto de esquemático, layout, prototipagem e firmware bare-metal. Foco em robustez elétrica, EMC, lógica inteligente e segura com custo de produção viável para pequenas e médias séries.
           </p>
         </div>
       </article>
       
-      <article id="vb4" class="visual-block reverse" aria-labelledby="vb4">
+      <article id="vb4" class="visual-block reverse" aria-labelledby="softwaresTitle">
         <div class="visual-image" style="background-image:url('assets/img/dashboard.png')" role="img" aria-label="Dashboard de aplicação web para supervisão">
           <span class="placeholder-tag">Software sob medida</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Software</p>
-          <h3>Aplicações web, desktop e mobile</h3>
+          <h3 id="softwaresTitle">Aplicações web, desktop e mobile</h3>
           <p>
             Sistemas supervisórios, painéis de gestão, integrações via API e ferramentas internas. Stack moderna e elegante com foco em confiabilidade, manutenção a longo prazo e independência de serviços de terceiros.
           </p>
         </div>
       </article>
       
-      <article id="vb5" class="visual-block" aria-labelledby="vb5">
+      <article id="vb5" class="visual-block" aria-labelledby="clpsTitle">
         <div class="visual-image" style="background-image:url('assets/img/clp-ladder.png')" role="img" aria-label="Trecho de programação em Ladder em um CLP">
           <span class="placeholder-tag">Controladores Industriais</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">CLPs</p>
-          <h3>Programação Ladder, ST e FBD</h3>
+          <h3 id="clpsTitle">Programação Ladder, ST e FBD</h3>
           <p>
             Programação de CLPs multimarcas, redes industriais Modbus RTU/TCP, Profinet e EtherCAT com lógica segura, inteligente e escalável.
           </p>
         </div>
       </article>
       
-      <article id="vb6" class="visual-block reverse" aria-labelledby="vb6">
+      <article id="vb6" class="visual-block reverse" aria-labelledby="ihmsTitle">
         <div class="visual-image" style="background-image:url('assets/img/supervisorio.jpg')" role="img" aria-label="Tela de sistema supervisório industrial">
-          <span class="placeholder-tag">supervisórios / IHM</span>
+          <span class="placeholder-tag">Supervisórios / IHM</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Supervisão</p>
-          <h3>IHMs e SCADA sob medida</h3>
+          <h3 id="ihmsTitle">IHMs e SCADA sob medida</h3>
           <p>
             Telas operacionais claras, com alarmes priorizados, históricos e receitas. Supervisórios e Dashboards rodando local ou em nuvem.
           </p>
         </div>
       </article>
       
-      <article id="vb7" class="visual-block" aria-labelledby="vb7">
-        <div class="visual-image placeholder" style="background-image: url(assets/img/inversor-frequencia.png);" role="img" aria-label="Espaço reservado para imagem de inversor de frequência industrial">
+      <article id="vb7" class="visual-block" aria-labelledby="driversTitle">
+        <div class="visual-image" style="background-image: url('assets/img/inversor-frequencia.png');" role="img" aria-label="Inversor de frequência industrial">
           <span class="placeholder-tag">Inversores / Servo Drivers</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Drives</p>
-          <h3>Parametrização e integração de Drivers</h3>
+          <h3 id="driversTitle">Parametrização e integração de Drivers</h3>
           <p>
-            Inversores de Frequênica, Servo Drivers e Soft-start multi-marcas para controle de torque, precisão, velocidade. Integração com a lógica de processo via rede industrial.
+            Inversores de Frequência, Servo Drivers e Soft-start multi-marcas para controle de torque, precisão, velocidade. Integração com a lógica de processo via rede industrial.
           </p>
         </div>
       </article>
       
-      <article id="vb8" class="visual-block reverse" aria-labelledby="vb8">
-        <div class="visual-image placeholder" style="background-image:url('assets/img/hipot-tester.jpeg');" role="img" aria-label="Equipamento de ensaio HIPOT em operação">
+      <article id="vb8" class="visual-block reverse" aria-labelledby="ensaiosTitle">
+        <div class="visual-image" style="background-image:url('assets/img/hipot-tester.jpeg');" role="img" aria-label="Equipamento de ensaio HIPOT em operação">
           <span class="placeholder-tag">Ensaios HIPOT</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Ensaios elétricos</p>
-          <h3>HIPOT e Megômetro</h3>
+          <h3 id="ensaiosTitle">HIPOT e Megômetro</h3>
           <p>
             Testamos isolação de motores, transformadores, painéis, cabos, barramentos, muflas e subestações antes da energização ou após manutenções. Emitimos relatórios técnicos para adequação de normas técnicas.
           </p>
         </div>
       </article>
       
-      <article id="vb9" class="visual-block" aria-labelledby="vb9">
-        <div class="visual-image placeholder" style="background-image:url('assets/img/pcb-pth.png')" role="img" aria-label="Placa de circuito impresso em reparo">
+      <article id="vb9" class="visual-block" aria-labelledby="eletronicsTitle">
+        <div class="visual-image" style="background-image:url('assets/img/pcb-pth.png')" role="img" aria-label="Placa de circuito impresso em reparo">
           <span class="placeholder-tag">Circuitos Eletrônicos</span>
         </div>
         <div class="visual-text">
           <p class="eyebrow">Manutenção</p>
-          <h3>Reparo de placas eletrônicas</h3>
+          <h3 id="eletronicsTitle">Reparo de placas eletrônicas</h3>
           <p>
             Diagnóstico com instrumentação de bancada, troca de componentes SMD e THT, e testes funcionais. Em circuitos legado quando o reparo não é possível, oferecemos solução equivalente projetada por nós.
           </p>
@@ -432,18 +433,6 @@
             </div>
           </article>
           
-          <!-- Em breve -->
-          <!-- <article class="product-card">
-            <div class="product-media placeholder-media">
-              <span class="placeholder-tag">EM BREVE</span>
-            </div>
-            <div class="product-body">
-              <span class="product-tag">Em desenvolvimento</span>
-              <h3>Novo projeto</h3>
-              <p>Espaço reservado para um próximo produto. O conteúdo será atualizado conforme novas entregas forem concluídas.</p>
-            </div>
-          </article> -->
-          
         </div>
       </div>
       
@@ -481,14 +470,14 @@
           <p class="eyebrow">Sobre nós</p>
           <h2 id="sobreTitle">Soluções de engenharia e desenvolvimento tecnológico.</h2>
           <p>
-            A <strong>DACLA Automação</strong> foi criada em 2020 por <strong>Daniel Clarinda</strong> — técnico em eletrotécnica, aluno de engenharia elétrica e a mais de quinze anos atuando em montagem, instalação, manutenção e automação de máquinas industriais, com ênfase em programação de CLPs, IHMs e Inversores.
+            A <strong>DACLA Automação</strong> foi criada em 2020 por <strong>Daniel Clarinda</strong> — técnico em eletrotécnica, aluno de engenharia elétrica e há mais de quinze anos atuando em montagem, instalação, manutenção e automação de máquinas industriais, com ênfase em programação de CLPs, IHMs e Inversores.
           </p>
           <p>
             A empresa nasceu para resolver problemas complexos com tecnologia e inovação. Entregando soluções personalizadas do hardware ao supervisório.
           </p>
         </div>
         
-        <!-- info rigth -->
+        <!-- info -->
         <aside class="about-stats" aria-label="Números da empresa">
           <div>
             <strong>2020</strong>
@@ -517,20 +506,17 @@
       <div class="footer-brand">
         <!-- logo -->
         <img src="assets/img/logo.png" alt="DACLA Automação" width="160" height="44" loading="lazy">
-        <p class="muted">Soluções industriais sob medida.<br>Do circuito eletrônico a interface do usuário.</p>
+        <p class="muted">Soluções industriais sob medida.<br>Do circuito eletrônico à interface do usuário.</p>
         
         <!-- Brasil flag -->
         <span class="flag-br" role="img" aria-label="Empresa brasileira" title="Brasil">
-          <svg viewBox="0 0 28 20" aria-hidden="true">
-            <rect width="28" height="20" fill="#009c3b"/>
-            <path d="M14 3 L25 10 L14 17 L3 10 Z" fill="#ffdf00"/>
-            <circle cx="14" cy="10" r="4" fill="#002776"/>
-          </svg>
+          <svg aria-hidden="true"><use href="#icon-flag-br"/></svg>
           <span>Brasil</span>
         </span>
       </div>
       
       <!-- contact -->
+      <!-- SYNC: telefone, e-mail e CNPJ desta seção também aparecem em 404.html. Telefone também no schema.org (head) e no FAB do WhatsApp (final do body). -->
       <div>
         <h4>Contato</h4>
         <ul class="footer-list">
@@ -595,6 +581,7 @@
   </button>
   
   <!-- ============ WHATSAPP ICON ============ -->
+  <!-- SYNC: mesmo número do footer e do schema.org. Também em 404.html. -->
   <a
     class="whatsapp-fab"
     href="https://wa.me/5547997052402"
