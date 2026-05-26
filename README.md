@@ -85,7 +85,7 @@ O site é publicado pelo **GitHub Pages** a partir da branch `main`, na raiz do 
 - **Duas convenções de ID convivem por design** — não misturar:
   - **lowercase plano** para destinos de navegação visíveis ao usuário, porque entram em URLs públicas (`#servicos`, `#produtos`, `#sobre`, `#contato`, `#downloads`, `#conteudo`) e em `sitemap.xml`. Renomear quebra links externos e SEO.
   - **camelCase** para IDs referenciados apenas por JS ou ARIA (`navToggle`, `primaryNav`, `backToTop`, `heroTitle`, `servicosTitle`, `iotTitle`, etc.). Internos ao projeto, podem mudar sem impacto externo.
-- Visual-blocks numerados como `vb1`–`vb9` para a navegação interna a partir dos cards de serviços (também lowercase, pois entram em `href="#vb1"`).
+- Visual-blocks com IDs **semânticos lowercase** (`#industria-40`, `#iot`, `#sistemas-embarcados`, `#softwares`, `#clp`, `#supervisorio`, `#inversores`, `#ensaios`, `#eletronica`), usados como destino de navegação a partir dos cards de serviços. Como aparecem na barra de endereço ao clicar nos cards, devem permanecer descritivos e estáveis — renomear quebra links compartilhados e a leitura natural da URL.
 
 ### CSS
 - Arquivo único, organizado em banners de comentário (`/* ====== HEADER ====== */`).
