@@ -2,7 +2,7 @@
 
 Site institucional estático da **DACLA Automação** — engenharia em automação industrial, sistemas embarcados, IoT, CLPs, IHMs, inversores de frequência, ensaios elétricos e desenvolvimento de software.
 
-URL em produção: <https://danielclarinda.github.io/site/>
+URL em produção: <https://daclaautomacao.com.br/>
 
 ---
 
@@ -21,22 +21,25 @@ URL em produção: <https://danielclarinda.github.io/site/>
 
 ```
 site/
-├── index.html              # Página principal (única página real)
-├── 404.html                # Página de erro do GitHub Pages
-├── robots.txt              # Permite tudo + aponta para sitemap
-├── sitemap.xml             # 5 URLs (raiz + 4 âncoras). lastmod manual.
-├── README.md               # Este arquivo
+├── index.html                    # Página principal (única página real)
+├── 404.html                      # Página de erro do GitHub Pages
+├── CNAME                         # Domínio personalizado (daclaautomacao.com.br)
+├── robots.txt                    # Permite tudo + aponta para sitemap
+├── sitemap.xml                   # 5 URLs (raiz + 4 âncoras). lastmod manual.
+├── README.md                     # Este arquivo
 ├── assets/
 │   ├── css/
-│   │   └── style.css       # Folha única, seccionada por banners
+│   │   └── style.css             # Folha única, seccionada por banners
 │   ├── js/
-│   │   ├── main.js         # Bootstrap dos módulos no DOMContentLoaded
+│   │   ├── main.js               # Bootstrap dos módulos no DOMContentLoaded
 │   │   └── modules/
-│   │       ├── nav.js      # Hamburger + fechamento via Esc/click
-│   │       ├── year.js     # Preenche o <span id="year"> no footer
-│   │       └── backToTop.js # Botão flutuante com throttle via rAF
-│   └── img/                # PNG/JPG/ICO/favicon. Sem otimização.
-└── downloads/              # Reservado para PDFs públicos (vazio hoje)
+│   │       ├── nav.js            # Hamburger + fechamento via Esc/click
+│   │       ├── year.js           # Preenche o <span id="year"> no footer
+│   │       ├── backToTop.js      # Botão flutuante com throttle via rAF
+│   │       ├── servicesCarousel.js # Carrossel de serviços (ativo só em mobile)
+│   │       └── productsCarousel.js # Carrossel de produtos (1/2/3 por breakpoint)
+│   └── img/                      # PNG/JPG/ICO/favicon. Sem otimização.
+└── downloads/                    # Reservado para PDFs públicos (vazio hoje)
 ```
 
 ---
@@ -63,11 +66,12 @@ Acesse `http://localhost:8000/`.
 
 ## Deploy
 
-O site é publicado pelo **GitHub Pages** a partir da branch `main`, na raiz do repositório. Qualquer push em `main` republica automaticamente.
+O site é publicado pelo **GitHub Pages** a partir da branch `main`, na raiz do repositório, com domínio personalizado configurado em Settings → Pages. Qualquer push em `main` republica automaticamente.
 
 - Repositório: `danielclarinda/site`
-- URL pública: `https://danielclarinda.github.io/site/`
-- Subpath: `/site/` (importante — paths absolutos quebram em produção; use sempre paths relativos).
+- URL pública: `https://daclaautomacao.com.br/`
+- Domínio: configurado via arquivo `CNAME` na raiz (mantido pelo GitHub Pages).
+- Servido na raiz do domínio — sem subpath. Mesmo assim, **manter paths relativos** em `href`/`src` para preservar portabilidade e funcionamento em previews/branches.
 
 ---
 
@@ -107,7 +111,7 @@ Por ser site puro sem template engine, alguns dados aparecem **duplicados em vá
 
 | Dado | Locais |
 |------|--------|
-| URL canônica `https://danielclarinda.github.io/site/` | `index.html` (canonical, og:url, og:image, twitter:image, schema.org logo/url) e `sitemap.xml` |
+| URL canônica `https://daclaautomacao.com.br/` | `index.html` (canonical, og:url, og:image, twitter:image, schema.org logo/url), `sitemap.xml` e `robots.txt` |
 | Telefone WhatsApp `+55 47 99705-2402` | `index.html` (schema.org, link do footer, botão flutuante) |
 | E-mail `dacla.automacao@hotmail.com` | `index.html` (footer) |
 | CNPJ `36.147.646/0001-43` | `index.html` (footer-bottom) |
@@ -128,7 +132,7 @@ Esta seção descreve restrições e expectativas para qualquer agente que edite
 - **Não introduzir Bootstrap** ou qualquer framework CSS/JS.
 - **Não adicionar Instagram** em nenhum lugar do site — somente YouTube como rede social.
 - **Não adicionar npm, package.json, bundler ou build step.** O projeto é estático puro; deve continuar sendo servível diretamente pelo GitHub Pages sem etapa de build.
-- **Não usar paths absolutos começando com `/`** em `href`/`src`. O site é servido em `/site/` no Pages, então paths absolutos quebram. Usar sempre paths relativos (`assets/img/...`).
+- **Não usar paths absolutos começando com `/`** em `href`/`src`. Embora o domínio personalizado sirva o site na raiz, manter paths relativos (`assets/img/...`) garante portabilidade entre previews, branches e qualquer fallback ao domínio `*.github.io/site/`.
 - **Não rodar comandos Git/GitHub** sem pedido explícito do usuário neste projeto.
 
 ### Expectativas

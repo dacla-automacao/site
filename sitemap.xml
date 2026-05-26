@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- SYNC: domínio https://danielclarinda.github.io/site/ também em index.html (canonical, og:url, og:image, twitter:image, schema.org). Atualizar lastmod a cada release. -->
+<!-- SYNC: domínio https://daclaautomacao.com.br/ também em index.html (canonical, og:url, og:image, twitter:image, schema.org). Atualizar lastmod a cada release. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://danielclarinda.github.io/site/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <loc>https://daclaautomacao.com.br/</loc>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://danielclarinda.github.io/site/#servicos</loc>
+    <loc>https://daclaautomacao.com.br/#servicos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://danielclarinda.github.io/site/#produtos</loc>
+    <loc>https://daclaautomacao.com.br/#produtos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://danielclarinda.github.io/site/#sobre</loc>
+    <loc>https://daclaautomacao.com.br/#sobre</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://danielclarinda.github.io/site/#contato</loc>
+    <loc>https://daclaautomacao.com.br/#contato</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
