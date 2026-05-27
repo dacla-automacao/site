@@ -24,6 +24,7 @@ site/
 ├── index.html                    # Página principal (única página real)
 ├── 404.html                      # Página de erro do GitHub Pages
 ├── CNAME                         # Domínio personalizado (daclaautomacao.com.br)
+├── favicon.ico                   # Favicon na raiz (fallback do Google Search)
 ├── robots.txt                    # Permite tudo + aponta para sitemap
 ├── sitemap.xml                   # 5 URLs (raiz + 4 âncoras). lastmod manual.
 ├── README.md                     # Este arquivo
