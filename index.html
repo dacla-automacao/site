@@ -9,6 +9,7 @@
   <meta name="description" content="Soluções em automação industrial 4.0, IoT, sistemas embarcados, CLPs, IHMs, inversores de frequência, ensaios com HIPOT, Megômetro, desenvolvimento e reparo de placas eletrônicas.">
   <meta name="author" content="DACLA Automação">
   <meta name="theme-color" content="#0a2540">
+  <meta name="application-name" content="DACLA Automação">
   <!-- SYNC: URL canônica https://daclaautomacao.com.br/ aparece em canonical, og:url, og:image, twitter:image, schema.org (url, logo) e em sitemap.xml. Atualizar em todos. -->
   <link rel="canonical" href="https://daclaautomacao.com.br/">
   
@@ -41,49 +42,63 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"></noscript>
   
   <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2026-05-27-001">
+  <link rel="stylesheet" href="assets/css/style.css?v=2026-05-31-001">
   
-  <!-- Schema.org -->
+  <!-- Schema.org — grafo conectando WebSite (para "site name" nas SERPs) e Organization -->
   <!-- SYNC: bloco abaixo contém telefone (+55-47-99705-2402), canal do YouTube e URLs canônicas. Todos também aparecem no footer/FAB do index.html e em 404.html. Manter espelhados. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "DACLA Automação",
-    "url": "https://daclaautomacao.com.br/",
-    "logo": "https://daclaautomacao.com.br/assets/img/logo.png",
-    "foundingDate": "2020",
-    "founder": {
-      "@type": "Person",
-      "name": "Daniel Clarinda",
-      "jobTitle": "CEO"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "BR"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+55-47-99705-2402",
-      "contactType": "customer support",
-      "areaServed": "BR",
-      "availableLanguage": ["Portuguese"]
-    },
-    "sameAs": [
-      "https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w"
-    ],
-    "knowsAbout": [
-      "Projetos elétricos",
-      "Automação Industrial",
-      "Indústria 4.0",
-      "IoT",
-      "Sistemas Embarcados",
-      "CLPs",
-      "IHMs",
-      "Inversores de Frequência",
-      "Ensaios com HIPOT",
-      "Ensaios com Megômetro",
-      "Desenvolvimento de Software"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://daclaautomacao.com.br/#website",
+        "url": "https://daclaautomacao.com.br/",
+        "name": "DACLA Automação",
+        "alternateName": "DACLA",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://daclaautomacao.com.br/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://daclaautomacao.com.br/#organization",
+        "name": "DACLA Automação",
+        "url": "https://daclaautomacao.com.br/",
+        "logo": "https://daclaautomacao.com.br/assets/img/logo.png",
+        "foundingDate": "2020",
+        "founder": {
+          "@type": "Person",
+          "name": "Daniel Clarinda",
+          "jobTitle": "CEO"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-47-99705-2402",
+          "contactType": "customer support",
+          "areaServed": "BR",
+          "availableLanguage": ["Portuguese"]
+        },
+        "sameAs": [
+          "https://www.youtube.com/channel/UChazDXIuQ71YFWU7EQbSK5w"
+        ],
+        "knowsAbout": [
+          "Projetos elétricos",
+          "Automação Industrial",
+          "Indústria 4.0",
+          "IoT",
+          "Sistemas Embarcados",
+          "CLPs",
+          "IHMs",
+          "Inversores de Frequência",
+          "Ensaios com HIPOT",
+          "Ensaios com Megômetro",
+          "Desenvolvimento de Software"
+        ]
+      }
     ]
   }
   </script>
@@ -595,6 +610,6 @@
   </a>
   
   <!-- Scripts (defer + modular) -->
-  <script type="module" src="assets/js/main.js?v=2026-05-27-001"></script>
+  <script type="module" src="assets/js/main.js?v=2026-05-31-001"></script>
 </body>
 </html>
