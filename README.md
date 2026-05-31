@@ -39,29 +39,9 @@ site/
 │   │       ├── backToTop.js      # Botão flutuante com throttle via rAF
 │   │       ├── servicesCarousel.js # Carrossel de serviços (ativo só em mobile)
 │   │       └── productsCarousel.js # Carrossel de produtos (1/2/3 por breakpoint)
-│   └── img/                      # PNG/JPG/ICO/favicon. Sem otimização.
+│   └── img/                      # Imagens em WebP, favicon PNG e ICO.
 └── downloads/                    # Reservado para PDFs públicos (vazio hoje)
 ```
-
----
-
-## Como rodar localmente
-
-O projeto é estático puro — basta servir a raiz por HTTP (abrir `index.html` direto no navegador funciona para a maior parte do site, mas ES Modules exigem servidor).
-
-```bash
-# Python 3
-python -m http.server 8000
-
-# Node (qualquer um destes)
-npx serve .
-npx http-server -p 8000
-
-# VS Code
-# Extensão "Live Server" → Open with Live Server
-```
-
-Acesse `http://localhost:8000/`.
 
 ---
 
@@ -69,7 +49,7 @@ Acesse `http://localhost:8000/`.
 
 O site é publicado pelo **GitHub Pages** a partir da branch `main`, na raiz do repositório, com domínio personalizado configurado em Settings → Pages. Qualquer push em `main` republica automaticamente.
 
-- Repositório: `danielclarinda/site`
+- Repositório: `dacla-automacao/site`
 - URL pública: `https://daclaautomacao.com.br/`
 - Domínio: configurado via arquivo `CNAME` na raiz (mantido pelo GitHub Pages).
 - Servido na raiz do domínio — sem subpath. Mesmo assim, **manter paths relativos** em `href`/`src` para preservar portabilidade e funcionamento em previews/branches.
@@ -112,16 +92,18 @@ Por ser site puro sem template engine, alguns dados aparecem **duplicados em vá
 
 | Dado | Locais |
 |------|--------|
-| URL canônica `https://daclaautomacao.com.br/` | `index.html` (canonical, og:url, og:image, twitter:image, schema.org logo/url), `sitemap.xml` e `robots.txt` |
-| Telefone WhatsApp `+55 47 99705-2402` | `index.html` (schema.org, link do footer, botão flutuante) |
-| E-mail `dacla.automacao@hotmail.com` | `index.html` (footer) |
-| CNPJ `36.147.646/0001-43` | `index.html` (footer-bottom) |
+| URL canônica | `index.html` (canonical, og:url, og:image, twitter:image, schema.org logo/url), `sitemap.xml` e `robots.txt` |
+| Telefone WhatsApp | `index.html` (schema.org, link do footer, botão flutuante) |
+| E-mail | `index.html` (footer) |
+| CNPJ | `index.html` (footer-bottom) |
 | Canal do YouTube | `index.html` (schema.org sameAs, link do footer) |
+
+> Os valores literais ficam apenas no `index.html` (single source of truth). Ao alterar qualquer um deles, propagar para todos os locais indicados na coluna direita.
 
 Outros pontos:
 - **`sitemap.xml`** tem `<lastmod>` manual — atualizar quando o conteúdo principal mudar.
 - **Não existe `site.webmanifest`** — foi removido por estar quebrado. Se voltar a precisar de PWA, criar do zero com paths corretos a partir do arquivo (relativos à pasta onde o manifest mora).
-- **Imagens em `assets/img/`** não passam por otimização. Vários PNGs estão acima de 2 MB; preferir WebP/AVIF e dimensionar antes de subir.
+- **Imagens em `assets/img/`** já estão em WebP. Ao adicionar novas, manter o formato e dimensionar para o tamanho real de exibição antes de subir.
 
 ---
 
